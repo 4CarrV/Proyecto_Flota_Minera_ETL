@@ -1,41 +1,52 @@
-Hallazgos Pre-Analisis del dataset.
+# Análisis de Mantenciones de Flota Minera (2023 - 2024)
 
-Hoja Ordenes:
-- Diferentes formatos de fecha en fechas inicio y fin.
-- fechas de fin en blanco con estado completado y otras en proceso.
-- Completado escrito en mayusculas, otras en minusculas, otro solo la inicial en mayusculas, misma situacion con En proceso.
-- Estados distintos, no normalizados, hay estados OK, En progreso, pend. completo.
-- 516 filas, 13 columnas.
-- Columna horas fuera servicio con datos en blanco.
-- fila 59 tiene fecha final pero estado pendiente, sin datos en costo mano de obra.
-- 40 equipos, 500 OT, 15 tecnicos.
-
-Hoja Equipos:
-- Anio-fabricacion.
-- 40 equipos, 6 tipos de equipos, 8 marcas, 12 modelos.
-- Distintos tipos de equipos con el mismo modelo.
-- 41 filas, 8 columnas.
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
+[![Pandas](https://img.shields.io/badge/Pandas-Data%20Cleaning-150458?logo=pandas&logoColor=white)](https://pandas.pydata.org/)
+[![Google BigQuery](https://img.shields.io/badge/SQL-BigQuery-4285F4?logo=googlecloud&logoColor=white)](https://cloud.google.com/bigquery)
+[![Looker Studio](https://img.shields.io/badge/BI-Looker%20Studio-F4B400?logo=google&logoColor=white)](https://lookerstudio.google.com/)
 
 ---
 
-Resumen:
-- 516 filas en ordenes, por lo que 515 son de datos, sin embargo se detectan 500 OT's, esto significa ot's duplicadas.
-- Tras investigacion de negocio se descubre que Caterpillar fabrica camiones, motoniveladoras y carg. frontales con sus propios tipos de modelos.
-- Fila 59 con fecha_fin pero estado Pendiente, corresponde a inconsistencia con decision de negocio: Tecnico cerro fecha antes de actualizar estado o el sistema permitio guardar un estado inconsistente.
-- Columnas con costos en blanco, nulos en costo_mano_obra.
-- Las fechas con datos en blanco debieran quedar como NaT, no todas son un error. si se eliminaran las filas quedarian Ot's sin analizar, al llegar al punto de visualizarlo en el dashboard se podria analizar cada caso por separado con un apartado de "Inconsistencias".
-- Nulos 'horas_fuera_servicio', se mantendrán los datos en blanco (NaT) ya que pandas ignora usando skipna=True. Si se dejara en 0 puede bajar artificialmente el promedio de horas, dejarlo como Sin_Registro arruinaria calculos con pandas al procesar los datos como texto.
+## Descripción General
+Proyecto end-to-end de análisis de datos enfocado en la disponibilidad, confiabilidad y costos operacionales de una flota minera (40 equipos) entre 2023 y 2024. 
 
-<!-- Nota PostgreSQL: Conexión asume autenticación local de PostgreSQL. -->
-Consultas SQL:
+El proyecto abarca desde la ingesta y auditoría de calidad de datos crudos (`raw.xlsx`), un pipeline **ETL en Python (Pandas)** para limpieza y normalización, modelado y consultas analíticas en **SQL**, hasta la visualización ejecutiva en un **Dashboard interactivo en Looker Studio**.
+NOTA IMPORTANTE: SE ANONIMIZO EL DATASET ORIGINAL POR MOTIVOS DE PRIVACIDAD DEL CLIENTE DE IGUAL MANERA SE MODIFICARON FECHAS.
+---
 
--- ¿Cuál es el costo total de mantenimiento por tipo?
--- ¿Qué equipo acumuló más horas fuera de servicio?
--- Promedio de horas fuera de servicio por tipo de mantenimiento
--- ¿Qué área de faena genera más OTs correctivas?
--- ¿Qué técnico tiene más OTs de emergencia?
--- Top 5 sistemas con mayor costo acumulado de reparación
+## Dashboard Ejecutivo (Looker Studio)
+
+![Dashboard Looker Studio](imgs_proyecto/InformeLookerStudio.png)
+
+### KPIs y Métricas Principales del Periodo:
+* **Gasto Total en Mantenciones:** $610.535.000 CLP
+* **Horas Fuera de Servicio Totales:** 10.176 hrs
+* **Promedio de Detención por OT:** 21,47 hrs
+* **Tasa de Mantención Reactiva (Correctivo + Emergencia):** 64,8%
+* **Órdenes de Trabajo Validadas:** 500 OTs
 
 ---
 
-![Dashboard](imgs_proyecto/InformeLookerStudio.png)
+## Stack Tecnológico
+* **Lenguaje:** Python
+* **Procesamiento y ETL:** Pandas, NumPy, OpenPyXL
+* **Almacenamiento y Consultas:** Google BigQuery / SQL (DWH)
+* **Visualización & BI:** Looker Studio
+* **Control de Versiones:** Git & GitHub
+
+---
+
+## Estructura del Repositorio
+
+```text
+Caso_02_Flota_Minera/
+├── data/
+│   ├── duplicados_ots.csv       # Registro histórico de OTs duplicadas extraídas
+│   └── raw.xlsx                 # Dataset crudo con hojas 'Ordenes' y 'Equipos'
+├── imgs_proyecto/
+│   └── InformeLookerStudio.png  # Captura visual del reporte de BI
+├── SQL/
+│   └── consultas.sql            # Queries analíticas y agregaciones clave
+├── src/
+│   └── etl_flota.py             # Script de extracción, transformación y carga
+└── README.md                    # Documentación del proyecto
