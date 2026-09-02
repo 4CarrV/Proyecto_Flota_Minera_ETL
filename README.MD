@@ -11,7 +11,7 @@
 Proyecto end-to-end de análisis de datos enfocado en la disponibilidad, confiabilidad y costos operacionales de una flota minera (40 equipos) entre 2023 y 2024. 
 
 El proyecto abarca desde la ingesta y auditoría de calidad de datos crudos (`raw.xlsx`), un pipeline **ETL en Python (Pandas)** para limpieza y normalización, modelado y consultas analíticas en **SQL**, hasta la visualización ejecutiva en un **Dashboard interactivo en Looker Studio**.
-NOTA IMPORTANTE: SE ANONIMIZO EL DATASET ORIGINAL POR MOTIVOS DE PRIVACIDAD DEL CLIENTE DE IGUAL MANERA SE MODIFICARON FECHAS.
+## NOTA IMPORTANTE: SE ANONIMIZO EL DATASET ORIGINAL POR MOTIVOS DE PRIVACIDAD DEL CLIENTE DE IGUAL MANERA SE MODIFICARON FECHAS.
 ---
 
 ## Dashboard Ejecutivo (Looker Studio)
