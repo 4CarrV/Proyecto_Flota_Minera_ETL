@@ -53,9 +53,9 @@ Conteo de OTs de emergencia atendidas por cada especialista para balance de turn
 ---
 
 ## Hallazgos y Conclusiones del Negocio
-* **Elevada Reactividad Operacional: El 86,98% de los costos totales provienen de intervenciones reactivas (Correctivo: $383.143.000 CLP + Emergencia: $147.851.000 CLP), mientras que el mantenimiento preventivo y predictivo representan menos del 14% del gasto global.
-* **Cuello de Botella en Rajo Sur: Es el área operativa con mayor impacto en disponibilidad, acumulando 2.899 horas fuera de servicio.
-* **Priorización de Repuestos: El Sistema Eléctrico ($81,2M CLP) y el Sistema de Frenos ($76,25M CLP) concentran el mayor costo de recambio/mano de obra, marcando dónde deben orientarse los planes de monitoreo de condición e inventario crítico en bodega.
+* Elevada Reactividad Operacional: El 86,98% de los costos totales provienen de intervenciones reactivas (Correctivo: $383.143.000 CLP + Emergencia: $147.851.000 CLP), mientras que el mantenimiento preventivo y predictivo representan menos del 14% del gasto global.
+* Cuello de Botella en Rajo Sur: Es el área operativa con mayor impacto en disponibilidad, acumulando 2.899 horas fuera de servicio.
+* Priorización de Repuestos: El Sistema Eléctrico ($81,2M CLP) y el Sistema de Frenos ($76,25M CLP) concentran el mayor costo de recambio/mano de obra, marcando dónde deben orientarse los planes de monitoreo de condición e inventario crítico en bodega.
 
 ## Estructura del Repositorio
 
