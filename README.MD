@@ -36,24 +36,6 @@ El proyecto abarca desde la ingesta y auditoría de calidad de datos crudos (`ra
 
 ---
 
-## Estructura del Repositorio
-
-```text
-Caso_02_Flota_Minera/
-├── data/
-│   ├── duplicados_ots.csv       # Registro histórico de OTs duplicadas extraídas
-│   └── raw.xlsx                 # Dataset crudo con hojas 'Ordenes' y 'Equipos'
-├── imgs_proyecto/
-│   └── InformeLookerStudio.png  # Captura visual del reporte de BI
-├── SQL/
-│   └── consultas.sql            # Queries analíticas y agregaciones clave
-├── src/
-│   └── etl_flota.py             # Script de extracción, transformación y carga
-└── README.md                    # Documentación del proyecto
-```text
-
----
-
 ## Preguntas de Negocio y Consultas SQL (SQL/consultas.sql)
 
 El repositorio incluye consultas SQL estructuradas para responder interrogantes críticas de confiabilidad operacional:
@@ -74,3 +56,18 @@ Conteo de OTs de emergencia atendidas por cada especialista para balance de turn
 * **Elevada Reactividad Operacional: El 86,98% de los costos totales provienen de intervenciones reactivas (Correctivo: $383.143.000 CLP + Emergencia: $147.851.000 CLP), mientras que el mantenimiento preventivo y predictivo representan menos del 14% del gasto global.
 * **Cuello de Botella en Rajo Sur: Es el área operativa con mayor impacto en disponibilidad, acumulando 2.899 horas fuera de servicio.
 * **Priorización de Repuestos: El Sistema Eléctrico ($81,2M CLP) y el Sistema de Frenos ($76,25M CLP) concentran el mayor costo de recambio/mano de obra, marcando dónde deben orientarse los planes de monitoreo de condición e inventario crítico en bodega.
+
+## Estructura del Repositorio
+
+```text
+Caso_02_Flota_Minera/
+├── data/
+│   ├── duplicados_ots.csv       # Registro histórico de OTs duplicadas extraídas
+│   └── raw.xlsx                 # Dataset crudo con hojas 'Ordenes' y 'Equipos'
+├── imgs_proyecto/
+│   └── InformeLookerStudio.png  # Captura visual del reporte de BI
+├── SQL/
+│   └── consultas.sql            # Queries analíticas y agregaciones clave
+├── src/
+│   └── etl_flota.py             # Script de extracción, transformación y carga
+└── README.md                    # Documentación del proyecto
