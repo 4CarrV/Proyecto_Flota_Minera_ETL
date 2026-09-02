@@ -38,4 +38,4 @@ Consultas SQL:
 
 ---
 
-![Dashboard](imags_proyecto/InformeLookerStudio.png)
+![Dashboard](imgs_proyecto/InformeLookerStudio.png)
