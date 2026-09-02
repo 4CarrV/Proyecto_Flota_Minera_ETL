@@ -16,6 +16,8 @@ Hoja Equipos:
 - Distintos tipos de equipos con el mismo modelo.
 - 41 filas, 8 columnas.
 
+---
+
 Resumen:
 - 516 filas en ordenes, por lo que 515 son de datos, sin embargo se detectan 500 OT's, esto significa ot's duplicadas.
 - Tras investigacion de negocio se descubre que Caterpillar fabrica camiones, motoniveladoras y carg. frontales con sus propios tipos de modelos.
@@ -33,3 +35,7 @@ Consultas SQL:
 -- ¿Qué área de faena genera más OTs correctivas?
 -- ¿Qué técnico tiene más OTs de emergencia?
 -- Top 5 sistemas con mayor costo acumulado de reparación
+
+---
+
+![Dashboard](imags_proyecto/InformeLookerStudio.png)
