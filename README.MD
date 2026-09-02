@@ -33,5 +33,3 @@ Consultas SQL:
 -- ¿Qué área de faena genera más OTs correctivas?
 -- ¿Qué técnico tiene más OTs de emergencia?
 -- Top 5 sistemas con mayor costo acumulado de reparación
-
-![alt text](InformeLookerStudio.png)
