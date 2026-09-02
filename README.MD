@@ -39,15 +39,15 @@ El proyecto abarca desde la ingesta y auditoría de calidad de datos crudos (`ra
 ## Preguntas de Negocio y Consultas SQL (SQL/consultas.sql)
 
 El repositorio incluye consultas SQL estructuradas para responder interrogantes críticas de confiabilidad operacional:
-* **Impacto Financiero por Tipo de Mantención:
+* Impacto Financiero por Tipo de Mantención:
 Evaluación del gasto acumulado entre mantenimientos Correctivo, Emergencia, Predictivo y Preventivo (evidenciando que el 62,76% del presupuesto se concentró en fallas correctivas).
-* **Equipos Críticos con Mayor Indisponibilidad:
+* Equipos Críticos con Mayor Indisponibilidad:
 Identificación del Top 5 de equipos con mayor impacto en detención (liderado por el equipo EQ-030 - Sandvik con 560 hrs).
-* **Distribución Geográfica / Áreas de Faena:
+* Distribución Geográfica / Áreas de Faena:
 Cuantificación de horas fuera de servicio por sector (Rajo Sur, Chancado, Botadero Norte, Taller Central, Rajo Norte).
-* **Sistemas Mecánicos/Eléctricos más Costosos:
+* Sistemas Mecánicos/Eléctricos más Costosos:
 Ranking de criticidad por sistema (con Sistema Eléctrico, Frenos y Enfriamiento acumulando las mayores sumas de reparación).
-* **Rendimiento y Carga de Trabajo de Técnicos:
+* Rendimiento y Carga de Trabajo de Técnicos:
 Conteo de OTs de emergencia atendidas por cada especialista para balance de turnos.
 
 ---
