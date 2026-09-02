@@ -50,7 +50,7 @@ Caso_02_Flota_Minera/
 ├── src/
 │   └── etl_flota.py             # Script de extracción, transformación y carga
 └── README.md                    # Documentación del proyecto
-
+```text
 
 ---
 
